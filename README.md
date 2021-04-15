@@ -6,6 +6,7 @@ $w or $who
 $last
 #### List Last 200 lines of Commands for Current User
 $cat ~/.bash_history | less
+
 $vi /home/username/.bash_history
 #### List System File Changed Recently
 $find /etc /var -mtime -2
@@ -35,9 +36,11 @@ $ps aux
 ```
 #### Check Running Process
 $top
+  
 $htop
 #### Check SSH Attempt Connection
 $tail -n 300 /var/log/auth.log
+
 $tail -n 300 /var/log/auth.log | grep sshd
 #### Check Open Ports
 $nmap localhost
@@ -45,7 +48,9 @@ $nmap localhost
 $ls /proc/*/exe -la
 #### Common Attack Points
 $ls /tmp -la
+
 $ls /dev/shm -la
+
 $ls /var/tmp -la
 ```
 Common unsecured places
