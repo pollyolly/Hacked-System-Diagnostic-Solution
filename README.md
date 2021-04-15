@@ -26,5 +26,36 @@ $netstat -ntu|awk '{print $5}'|cut -d: -f1 -s|sort|uniq -c|sort -nk1 -r
 lsof -i
 #### Call All System calls made by Process
 $strace -d -p <PID Number>
-####
+#### Show Users Process
+$ps aux
+```
+  a - show process for all users
+  u - display the process user/owner
+  x - show process not attached to terminal
+```
+#### Check Running Process
+$top
+$htop
+#### Check SSH Attempt Connection
+$tail -n 300 /var/log/auth.log
+$tail -n 300 /var/log/auth.log | grep sshd
+#### Check Open Ports
+$nmap localhost
+#### Kernel Data Structure
+$ls /proc/*/exe -la
+#### Common Attack Points
+$ls /tmp -la
+$ls /dev/shm -la
+$ls /var/tmp -la
+```
+Common unsecured places
+```
+#### Show Crontab Scheduled Jobs
+$less /etc/crontab
+#### View Specific Software Cronjobs
+$cd /etc/cron.d/
+$ls -l
+#### Listing Users Cronjobs When using Systemd timers
+$systemctl list-timers
+
 
